@@ -1,0 +1,65 @@
+id_offre,id_recruteur,titre,entreprise,description,contrat,lieu,salaire_min,salaire_max,date_debut,date_pub,cv_obligatoire,lm_obligatoire
+2,3,"Dev web",BPCE,devv,CDI,70008,2000,5000,2025-05-15,2025-05-05,oui,non
+3,2,"Developpeur wwen",BPCE,dcdccdccddcdd,CDI,Paris,2000,3000,2025-01-20,2025-05-05,oui,non
+4,2,ddeee,BPCE,kkkkkkkkkkkkkkkkkk,CDD,70008,27,61,2025-05-28,2025-05-05,non,non
+5,2,"Chef de projet IT",Capgemini,"Gestion de projets Agile",CDD,"Paris 10e",3000,4500,2025-05-20,2025-04-28,oui,oui
+6,3,"Ingénieur réseau",Orange,"Administration réseaux et sécurité",CDI,Issy-les-Moulineaux,3200,4800,2025-07-01,2025-05-02,non,non
+7,5,"Consultant SAP",Deloitte,"Paramétrage modules FI/CO",Alternance,"La Défense",1800,2200,2025-09-01,2025-04-30,oui,oui
+8,2,"Développeur mobile","Sopra Steria","Applications iOS/Android",CDI,Nanterre,3300,4700,2025-06-15,2025-04-27,oui,non
+9,3,"UX/UI Designer",Publicis,"Conception d’interfaces",CDD,"Paris 1er",2800,3500,2025-05-25,2025-05-03,non,oui
+10,5,"Data Engineer",AXA,"Pipeline ETL et Big Data",CDI,"Paris 7e",4000,6000,2025-06-10,2025-05-04,oui,oui
+11,2,"Responsable marketing",L’Oréal,"Stratégie digitale",CDI,Clichy,3600,5000,2025-07-01,2025-05-01,oui,non
+12,3,"Technicien support",IBM,"Assistance utilisateurs",CDD,"Paris 12e",2200,2800,2025-05-18,2025-04-29,non,non
+13,5,"Architecte cloud",AWS,"Design d’infrastructures cloud",CDI,"Paris 2e",5000,7500,2025-08-01,2025-05-05,oui,oui
+14,2,"Business Analyst",SNCF,"Optimisation process",Alternance,Saint-Denis,1600,2000,2025-09-01,2025-04-26,oui,non
+15,3,"Chargé de communication",EDF,"Campagnes réseaux sociaux",CDD,"Paris 4e",2500,3200,2025-06-01,2025-05-02,non,oui
+16,4,"Développeur backend",Airbus,"API REST et microservices",CDI,Toulouse,3800,5300,2025-07-15,2025-05-03,oui,non
+17,2,"Chef de produit",Danone,"Lancement de gammes",CDI,"Paris 16e",4100,5800,2025-08-01,2025-05-04,oui,oui
+18,3,"Ingénieur qualité",Renault,"Tests et validation",CDD,Boulogne-Billancourt,2900,3600,2025-05-30,2025-04-28,non,non
+19,5,"Lead développeur",Google,"Projets innovants",CDI,"Paris 13e",6500,9000,2025-09-01,2025-05-05,oui,oui
+20,2,"Responsable RH","Air France","Gestion du personnel",CDI,"Paris 8e",3700,5200,2025-07-01,2025-05-01,oui,non
+21,3,"Analyste SEO",TripAdvisor,"Optimisation référencement",CDD,"Paris 9e",2700,3400,2025-06-10,2025-05-02,non,oui
+22,5,DevOps,Microsoft,"CI/CD et automatisation",CDI,Issy-les-Moulineaux,4500,6500,2025-07-15,2025-05-03,oui,oui
+23,2,Graphiste,Ubisoft,"Création d’assets 2D/3D",CDD,Montreuil,2600,3300,2025-06-01,2025-05-04,non,non
+24,4,"Stage Finance de marché",Natixis,"Structuration d’instruments financiers",Stage,"Paris 8e",1000,1400,2025-06-01,2025-05-05,non,non
+25,5,"Technicien de maintenance",Thales,"Maintenance équipements électroniques",CDD,Vélizy-Villacoublay,2400,3100,2025-05-20,2025-05-06,non,non
+26,5,"Consultant Big Data",Capgemini,"Mise en place de solutions Hadoop",Alternance,"Paris 7e",1700,2100,2025-09-01,2025-05-06,oui,oui
+27,2,"Rédacteur web SEO","Le Figaro","Création de contenus optimisés",CDD,"Paris 9e",2600,3300,2025-07-01,2025-05-06,non,oui
+28,3,"Chef de projet événementiel","GL Events","Organisation salons professionnels",CDI,"Lyon 3e",3500,4800,2025-08-15,2025-05-06,oui,non
+29,5,"Développeur full-stack",IBM,"Applications React + Node.js",CDI,"Paris 15e",4200,6000,2025-06-20,2025-05-06,oui,oui
+30,2,"Contrôleur de gestion",TotalEnergies,"Analyse coûts et performances",CDD,Courbevoie,3700,5200,2025-07-10,2025-05-06,non,non
+31,3,"UX Researcher",Accor,"Études utilisateurs et prototypage",CDD,"Paris 2e",3000,3800,2025-06-05,2025-05-06,non,oui
+32,5,"Data Scientist",Orange,"Modèles de machine learning",CDI,"Paris 13e",4500,7000,2025-07-01,2025-05-06,oui,oui
+33,2,"Responsable logistique",Amazon,"Optimisation des flux",CDI,Clichy,3600,5000,2025-07-15,2025-05-06,oui,non
+34,3,"Développeur front-end",Microsoft,"Interfaces Angular",CDI,Issy-les-Moulineaux,3900,5800,2025-06-25,2025-05-06,oui,oui
+35,5,"Assistant achat",Decathlon,"Suivi commandes fournisseurs",CDD,Villeneuve-d’Ascq,2300,3000,2025-05-30,2025-05-06,non,non
+36,2,"Community manager",LVMH,"Animation réseaux sociaux",Alternance,"Paris 16e",1600,2000,2025-09-01,2025-05-06,non,oui
+37,3,"Ingénieur d’études",Valeo,"Conception système embarqué",CDI,"Paris 17e",4100,6200,2025-08-01,2025-05-06,oui,non
+38,5,"Chargé de recrutement",Manpower,"Sélection et entretiens",CDD,"Paris 9e",2800,3500,2025-06-10,2025-05-06,non,oui
+39,2,"Architecte technique","Sopra Steria","Stratégies cloud et API",CDI,Nanterre,4800,7200,2025-07-01,2025-05-06,oui,oui
+40,3,"Ingénieur R&D",Safran,"Recherche matériaux composites",CDI,Saint-Ouen,4300,6500,2025-08-15,2025-05-06,oui,non
+41,5,"Analyste crédit","Société Générale","Études dossier client",CDD,"Paris 2e",3200,4100,2025-06-05,2025-05-06,non,oui
+42,2,"Formateur digital",Cegos,"Animations ateliers e-learning",CDD,"Paris 10e",3000,3800,2025-07-20,2025-05-06,non,non
+43,3,"Développeur Python",Thalès,"Solutions back-end",CDI,Évry,4000,5800,2025-06-15,2025-05-06,oui,oui
+44,2,"Stage Data Science",Thales,"Analyse de données industrielles",Stage,Toulouse,800,1200,2025-06-01,2025-05-10,oui,non
+45,3,"Stage UX/UI",EDF,"Conception d'interfaces utilisateur",Stage,Nanterre,850,1100,2025-06-10,2025-05-11,non,non
+46,4,"Ingénieur DevOps",Airbus,"Automatisation CI/CD",CDI,Toulouse,4200,5500,2025-08-01,2025-05-06,oui,oui
+47,5,"Développeur Front-End",Orange,"Intégration HTML/CSS/JS",CDD,Sophia-Antipolis,2600,3400,2025-06-20,2025-05-09,oui,non
+48,2,"Alternant Ressources Humaines","BNP Paribas","Recrutement et onboarding",Alternance,"Paris 6e",950,1350,2025-09-15,2025-05-10,non,non
+49,3,"Freelance Rédacteur Web",Webedia,"Création de contenus SEO",Freelance,Télétravail,300,500,2025-05-25,2025-05-05,non,non
+50,4,"Stage Contrôle de Gestion",Renault,"Analyse budgétaire",Stage,Boulogne-Billancourt,800,1000,2025-07-01,2025-05-12,non,non
+51,3,"Lead Architect Cloud",AWS,"Design d'architectures cloud haute dispo",CDI,"Paris 9e",7000,9500,2025-09-01,2025-05-14,oui,oui
+52,5,"Alternant Community Manager",Webedia,"Animation des réseaux sociaux",Alternance,Lyon,900,1300,2025-09-15,2025-05-15,non,non
+53,2,"Project Manager",Renault,"Pilotage de projets R&D",CDI,Boulogne-Billancourt,4800,6200,2025-08-01,2025-05-16,oui,non
+54,3,"Stage Analyst",Thales,"Étude de faisabilité technique",Stage,Nantes,850,1100,2025-06-10,2025-05-17,non,non
+55,5,"DevOps Engineer",Microsoft,"Pipeline CI/CD Azure DevOps",CDD,"Paris 12e",4000,5500,2025-07-01,2025-05-18,oui,oui
+56,2,"Alternant Data Scientist",Capgemini,"Modélisation statistique",Alternance,"Paris 7e",1100,1500,2025-09-01,2025-05-19,oui,non
+57,3,"Freelance Rédacteur Technique","Dassault Systèmes","Rédaction de guides utilisateurs",Freelance,Télétravail,3200,4200,2025-06-20,2025-05-20,non,non
+58,5,"Chargé de développement",EDF,"Prospection de nouveaux marchés",CDD,"Paris 15e",3000,3800,2025-06-05,2025-05-21,non,oui
+59,2,"Chef de projet Web",L’Oréal,"Refonte du site e-commerce",CDI,Clichy,4600,6100,2025-08-15,2025-05-22,oui,non
+60,3,"Stagiaire Ingénieur",SNCF,"Optimisation réseau ferroviaire",Stage,Saint-Denis,900,1150,2025-06-25,2025-05-23,non,non
+61,5,"Alternant QA",Orange,"Automatisation des tests",Alternance,Issy-les-Moulineaux,1000,1400,2025-09-01,2025-05-24,non,non
+62,2,"Consultant SAP FI",Deloitte,"Implémentation Finance",CDI,"Paris 8e",5500,7500,2025-07-01,2025-05-25,oui,oui
+63,3,"Data Engineer Junior",AXA,"Développement pipeline ETL",CDD,"Paris 16e",3200,4200,2025-06-10,2025-05-26,non,non
+
+1747163515,2,developpeuuur,"chez rosa","tu fais ce que tu veux ",CDI,paris,10000,10000,2025-05-29,2025-05-13,oui,non

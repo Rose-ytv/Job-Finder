@@ -1,0 +1,1440 @@
+
+
+:root {
+  --color-primary: #E17F7B;
+  --color-secondary: #88BDBC;
+  --color-bg: #F5F1E8;
+  --color-text: #333333;
+  --radius: 8px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.5;
+}
+
+/* === HERO === */
+.hero {
+  position: relative;
+  height: 360px;
+  background: url('../img/banner.png') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 40px;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(225,127,123,0.45);
+}
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+}
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: 300;
+  line-height: 1.1;
+  letter-spacing: 0.5px;
+  color: #fff;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.4);
+  margin: 0;
+}
+
+/* === SEARCH FORM === */
+.search-container {
+  max-width: 900px;
+  margin: -40px auto 20px;
+  position: relative;
+  z-index: 2;
+}
+.search-box {
+  display: flex;
+  gap: 15px;
+  background: #fff;
+  padding: 20px;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+.search-box div {
+  flex: 1;
+}
+.search-box label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 6px;
+}
+.search-box input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #ccc;
+  border-radius: var(--radius);
+}
+.search-box button {
+  background: var(--color-primary);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+  padding: 12px 20px;
+  white-space: nowrap;
+  min-width: 120px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-end; 
+}
+.search-box button:hover {
+  background: #c96b67;
+}
+
+/* === TAG BUTTONS === */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 16px;
+}
+.tag-button,
+.tags form button {
+  display: inline-block;
+  padding: 8px 16px;
+  background: #4a90e2;       
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.2s;
+}
+
+.tag-button:hover,
+.tags form button:hover {
+  background: #357ab8;
+}
+
+/* === USER CHOICE CARDS === */
+.choix-utilisateur {
+  text-align: center;
+  padding: 60px 20px;
+  background: var(--color-bg);
+}
+.choix-utilisateur h2 {
+  font-size: 1.6rem;
+  margin-bottom: 30px;
+}
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+.role-card {
+  background: #fff;
+  border: 2px solid var(--color-secondary);
+  border-radius: var(--radius);
+  padding: 24px;
+  width: 280px;
+  text-decoration: none;
+  color: var(--color-text);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.role-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+.role-card h3 {
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+  color: var(--color-primary);
+}
+.role-card p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+/* === COMPANY SECTION === */
+.company-section {
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 0 20px 40px;
+}
+.company-section h2 {
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.company-section h2 span {
+  color: var(--color-primary);
+}
+.company-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+  gap: 20px;
+}
+.company-card {
+  background: #fff;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: transform 0.2s;
+}
+.company-card:hover {
+  transform: translateY(-4px);
+}
+.company-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+/* === FOOTER === */
+footer {
+  background: var(--color-bg);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 0.9rem;
+  color: var(--color-text);
+  border-top: 1px solid #ddd;
+}
+
+/* === RESPONSIVE === */
+@media screen and (max-width: 600px) {
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+  .search-box {
+    flex-direction: column;
+  }
+  .cards-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+/* === FORMULAIRES (Inscription / Connexion) === */
+.form-container {
+  max-width: 500px;
+  margin: 60px auto;
+  background: #fff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.form-container h1 {
+  text-align: center;
+  font-size: 26px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #111;
+}
+
+/* Onglets */
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+  border-bottom: 2px solid #eee;
+}
+.tabs a {
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #555;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+.tabs a.active {
+  border-bottom: 2px solid #000;
+  color: #000;
+}
+
+/* Champs du formulaire */
+.form-container label {
+  display: block;
+  margin-top: 20px;
+  font-weight: 600;
+  font-size: 14px;
+}
+.form-container input,
+.form-container select {
+  width: 100%;
+  padding: 12px;
+  margin-top: 6px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+/* Bouton */
+.form-container button {
+  width: 100%;
+  background-color: var(--color-primary);
+  color: white;
+  font-size: 16px;
+  padding: 12px;
+  margin-top: 30px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.form-container button:hover {
+  background-color: #c96b67;  
+}
+
+#entreprise-field {
+  margin-top: 20px;
+}
+
+/* Responsive */
+@media screen and (max-width: 600px) {
+  .form-container {
+    margin: 20px;
+    padding: 30px;
+  }
+}
+/* === DASHBOARD CANDIDAT === */
+.dashboard {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f7f9fa;
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar {
+  width: 240px;
+  background-color: #ffffff;
+  border-right: 1px solid #e0e0e0;
+  padding: 30px 20px;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.05);
+}
+.sidebar h2 {
+  font-size: 20px;
+  margin-bottom: 30px;
+  color: #333;
+}
+.sidebar a {
+  display: block;
+  color: #00796b;
+  text-decoration: none;
+  margin-bottom: 12px;
+  padding: 10px 14px;
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
+}
+.sidebar a:hover,
+.sidebar a.active {
+  background-color: #e0f2f1;
+  color: #004d40;
+  font-weight: 600;
+}
+
+.dashboard-main {
+  flex: 1;
+  padding: 40px;
+}
+.dashboard-main h1 {
+  font-size: 24px;
+  margin-bottom: 30px;
+  color: #00796b;
+}
+.dashboard-main p {
+  font-size: 16px;
+  color: #555;
+}
+
+
+.offre-card {
+  background: #ffffff;
+  padding: 20px 25px;
+  margin-bottom: 25px;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.offre-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+.offre-card h3 {
+  margin: 0 0 10px;
+  font-size: 20px;
+  color: #004d40;
+}
+.offre-card p {
+  margin: 6px 0;
+  color: #555;
+  font-size: 15px;
+  line-height: 1.4;
+}
+.offre-card a {
+  display: inline-block;
+  margin-top: 12px;
+  color: #00796b;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+.offre-card a:hover {
+  color: #004d40;
+}
+/* === PROFIL CANDIDAT (profil.php) === */
+.profile-container {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f2f5f4; 
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar {
+  width: 240px;
+  background-color: #ffffff;
+  border-right: 1px solid #e0e0e0;
+  padding: 30px 20px;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.03);
+}
+.sidebar h2 {
+  font-size: 20px;
+  margin-bottom: 25px;
+  color: #004d40;
+}
+.sidebar a {
+  display: block;
+  color: #00796b;
+  text-decoration: none;
+  padding: 10px 14px;
+  margin-bottom: 12px;
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
+}
+.sidebar a:hover,
+.sidebar a.active {
+  background-color: #e0f2f1;
+  color: #004d40;
+  font-weight: 600;
+}
+
+
+.profile-main {
+  flex: 1;
+  padding: 40px;
+  background-color: transparent;
+}
+.profile-main h3 {
+  margin-top: 0;
+  color: #00796b;
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+
+.card {
+  background: #ffffff;
+  padding: 25px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+.card h3 {
+  margin-top: 0;
+  font-size: 20px;
+  color: #00796b;
+}
+
+/* --- Photo circulaire --- */
+.photo-cercle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid #00796b;
+  margin-bottom: 16px;
+}
+.photo-cercle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* --- Listes simples --- */
+.list-simple {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px;
+}
+.list-simple li {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px dashed #ccc;
+}
+.list-simple li:last-child {
+  border-bottom: none;
+}
+
+
+.card form input[type="text"],
+.card form input[type="email"],
+.card form input[type="file"],
+.card form input[type="number"],
+.card form select,
+.card form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+}
+.card form textarea {
+  resize: vertical;
+  min-height: 60px;
+}
+.card form button {
+  background-color: #00796b;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 16px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.card form button:hover {
+  background-color: #005a4e;
+}
+
+/* --- Items d’expérience & diplôme --- */
+.item {
+  margin-bottom: 15px;
+}
+.item p {
+  margin: 4px 0;
+  color: #555;
+  font-size: 14px;
+  line-height: 1.4;
+}
+.item a {
+  color: #d32f2f;
+  font-size: 14px;
+  text-decoration: none;
+  margin-top: 4px;
+  display: inline-block;
+}
+.item a:hover {
+  text-decoration: underline;
+}
+/* === MES CANDIDATURES (mes-candidatures.php) === */
+
+
+body.dashboard {
+  display: flex;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f2f5f4;
+  color: #333;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 240px;
+  background-color: #ffffff;
+  border-right: 1px solid #e0e0e0;
+  padding: 30px 20px;
+}
+.sidebar h2 {
+  font-size: 20px;
+  margin-bottom: 25px;
+  color: #004d40;
+}
+.sidebar a {
+  display: block;
+  padding: 10px 14px;
+  margin-bottom: 12px;
+  text-decoration: none;
+  color: #00796b;
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
+}
+.sidebar a:hover,
+.sidebar a.active {
+  background-color: #e0f2f1;
+  color: #004d40;
+  font-weight: 600;
+}
+
+/* Zone principale */
+.dashboard-main {
+  flex: 1;
+  padding: 40px;
+  background: transparent;
+}
+.dashboard-main h1 {
+  font-size: 24px;
+  margin-bottom: 25px;
+  color: #00796b;
+}
+
+/* Carte de candidature */
+.offre-card {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: box-shadow 0.2s ease-in-out;
+}
+.offre-card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+.offre-card h3 {
+  margin: 0 0 10px;
+  font-size: 18px;
+  color: #004d40;
+}
+.offre-card p {
+  margin: 6px 0;
+  font-size: 15px;
+  line-height: 1.5;
+}
+.offre-card a {
+  color: #00796b;
+  text-decoration: none;
+  font-weight: 500;
+}
+.offre-card a:hover {
+  text-decoration: underline;
+}
+
+
+.back-link {
+  display: inline-block;
+  margin-top: 20px;
+  color: #00796b;
+}
+.back-link:hover {
+  text-decoration: underline;
+}
+
+body.dashboard {
+  display: flex;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f2f5f4;
+  color: #333;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 240px;
+  background-color: #ffffff;
+  border-right: 1px solid #e0e0e0;
+  padding: 30px 20px;
+}
+.sidebar h2 {
+  font-size: 20px;
+  margin-bottom: 25px;
+  color: #37474f;
+}
+.sidebar a {
+  display: block;
+  padding: 10px 14px;
+  margin-bottom: 12px;
+  text-decoration: none;
+  color: #00796b;
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
+}
+.sidebar a:hover,
+.sidebar a.active {
+  background-color: #e0f2f1;
+  color: #004d40;
+  font-weight: 600;
+}
+
+/* Zone principale */
+.dashboard-main {
+  flex: 1;
+  padding: 40px;
+}
+.dashboard-main h1 {
+  font-size: 24px;
+  margin-bottom: 30px;
+  color: #00796b;
+}
+
+/* Formulaire d'ajout */
+.form-block {
+  background: #fff;
+  padding: 30px 25px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  max-width: 700px;
+  margin: 0 auto;
+}
+.form-block label {
+  display: block;
+  margin-top: 18px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #37474f;
+}
+.form-block input[type="text"],
+.form-block input[type="number"],
+.form-block input[type="date"],
+.form-block select,
+.form-block textarea {
+  width: 100%;
+  padding: 10px 14px;
+  margin-top: 6px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+  color: #333;
+}
+.form-block textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+.form-block .btn-action {
+  display: inline-block;
+  margin-top: 25px;
+  background-color: #00796b;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.form-block .btn-action:hover {
+  background-color: #005a4f;
+}
+/* === VOIR CANDIDATS === */
+
+main {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+}
+
+main h1 {
+  font-size: 24px;
+  color: #00796b;
+  margin-bottom: 25px;
+}
+
+main p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+main ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+main ul li {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+}
+
+main ul li strong {
+  font-size: 18px;
+  color: #005a4f;
+}
+
+main ul li p {
+  margin: 8px 0;
+  font-size: 15px;
+  color: #555;
+}
+
+main ul li img {
+  display: block;
+  margin-top: 12px;
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #00796b;
+}
+
+main ul li hr {
+  border: none;
+  border-top: 1px solid #eee;
+  margin: 15px 0 0;
+}
+
+main a {
+  color: #00796b;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+main a:hover {
+  text-decoration: underline;
+}
+
+/* Back link */
+main > p a {
+  display: inline-block;
+  margin-top: 30px;
+  color: #555;
+  transition: color 0.2s;
+}
+
+main > p a:hover {
+  color: #00796b;
+}
+/* === OFFRE DETAIL === */
+.offre-container {
+  max-width: 800px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+}
+
+.offre-container h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #00796b;
+}
+
+.offre-container p {
+  margin: 12px 0;
+  line-height: 1.6;
+}
+
+.offre-container p strong {
+  color: #444;
+}
+
+.offre-container hr {
+  border: none;
+  border-top: 1px solid #eee;
+  margin: 25px 0;
+}
+
+/* Bouton Postuler */
+.offre-container .btn-apply {
+  display: inline-block;
+  background-color: #00796b;
+  color: white;
+  text-decoration: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+  margin-top: 20px;
+  transition: background-color 0.2s;
+}
+
+.offre-container .btn-apply:hover {
+  background-color: #005a4f;
+}
+
+/* Lien retour */
+.offre-container .back-link {
+  display: inline-block;
+  margin-top: 30px;
+  color: #555;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.offre-container .back-link:hover {
+  color: #00796b;
+}
+
+/* Message invite à se connecter */
+.offre-container .login-prompt {
+  margin-top: 30px;
+  color: #888;
+  font-style: italic;
+}
+
+/* Responsive */
+@media screen and (max-width: 640px) {
+  .offre-container {
+    padding: 20px;
+    margin: 20px;
+  }
+  .offre-container h1 {
+    font-size: 24px;
+  }
+}
+/* === OFFRES.PHP === */
+
+/* Main container */
+main {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Page title */
+main > h1 {
+  font-size: 28px;
+  color: #2D4059;   /* dark navy */
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+/* Reuse search-box styling */
+.search-box {
+  display: flex;
+  gap: 15px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  margin-bottom: 30px;
+}
+
+.search-box input {
+  flex: 1;
+  padding: 12px 16px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.search-box button {
+  background: #EA5455;  /* warm orange-red */
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.search-box button:hover {
+  background: #F07B3F;  /* lighter orange */
+}
+
+/* Offer list */
+.offre-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.offre-item {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease;
+}
+
+.offre-item:hover {
+  transform: translateY(-2px);
+}
+
+/* Offer title */
+.offre-item strong {
+  display: block;
+  font-size: 20px;
+  color: #2D4059;
+  margin-bottom: 8px;
+}
+
+/* Offer metadata */
+.offre-item p {
+  margin: 6px 0;
+  color: #555;
+  font-size: 15px;
+}
+
+/* Divider */
+.offre-item hr {
+  border: none;
+  border-top: 1px solid #eee;
+  margin: 15px 0;
+}
+
+/* “Voir l’offre” link */
+.offre-item a {
+  color: #EA5455;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.offre-item a:hover {
+  text-decoration: underline;
+}
+
+/* Back link */
+.back-link {
+  display: inline-block;
+  margin-top: 30px;
+  color: #2D4059;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+/* Responsive tweaks */
+@media screen and (max-width: 600px) {
+  .offre-item {
+    padding: 15px;
+  }
+  main > h1 {
+    font-size: 24px;
+  }
+}
+
+/* === APPLICATION (Postuler) === */
+.application-container {
+  max-width: 700px;
+  margin: 40px auto;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+}
+
+.application-container h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #00796b;
+}
+
+.application-container p {
+  margin: 12px 0;
+  line-height: 1.6;
+}
+
+.application-form label {
+  display: block;
+  font-weight: 600;
+  margin-top: 15px;
+}
+
+.application-form input[type="file"] {
+  display: block;
+  margin-top: 8px;
+}
+
+.application-form .alert-error,
+.application-container .alert-error {
+  background: #fdecea;
+  color: #c62828;
+  padding: 12px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  border-left: 5px solid #e53935;
+}
+
+.application-form .alert-warning,
+.application-container .alert-warning {
+  background: #fff4e5;
+  color: #e65100;
+  padding: 12px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  border-left: 5px solid #fb8c00;
+}
+
+.application-form button.btn-submit {
+  margin-top: 25px;
+  background-color: #00796b;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.application-form button.btn-submit:hover {
+  background-color: #005a4f;
+}
+
+.application-container .back-link {
+  display: inline-block;
+  margin-top: 30px;
+  color: #555;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.application-container .back-link:hover {
+  color: #00796b;
+}
+
+/* Responsive */
+@media screen and (max-width: 640px) {
+  .application-container {
+    margin: 20px;
+    padding: 20px;
+  }
+  .application-container h2 {
+    font-size: 20px;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f7fb;
+  color: #333;
+  line-height: 1.5;
+}
+
+
+main {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+
+main h1 {
+  font-size: 28px;
+  color: #2D4059;    
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  margin-bottom: 30px;
+}
+
+form label {
+  align-self: center;
+  font-weight: 600;
+  margin-right: 5px;
+}
+
+form input[type="text"],
+form select {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+form button {
+  background: #EA5455;   
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+form button:hover {
+  background: #F07B3F;    
+}
+
+section h2 {
+  font-size: 22px;
+  color: #2D4059;
+  margin-bottom: 15px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: transform 0.2s;
+}
+
+li:hover {
+  transform: translateY(-2px);
+}
+
+li strong {
+  display: block;
+  font-size: 20px;
+  color: #2D4059;
+  margin-bottom: 8px;
+}
+
+li p {
+  margin: 6px 0;
+  color: #555;
+  font-size: 15px;
+}
+
+li hr {
+  border: none;
+  border-top: 1px solid #eee;
+  margin: 15px 0;
+}
+
+li a {
+  color: #EA5455;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+li a:hover {
+  text-decoration: underline;
+}
+
+
+main > p {
+  text-align: center;
+  margin-top: 30px;
+}
+
+main > p a {
+  color: #2D4059;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+main > p a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  form {
+    flex-direction: column;
+  }
+  li {
+    padding: 15px;
+  }
+  main h1 {
+    font-size: 24px;
+  }
+}
+
+.offre-detail {
+  max-width: 800px;
+  margin: 40px auto;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+.offre-detail h1 {
+  margin-top: 0;
+  font-size: 28px;
+  color: #0077cc;
+}
+
+.offre-detail p {
+  margin: 12px 0;
+}
+
+.offre-detail hr {
+  border: none;
+  border-top: 1px solid #eee;
+  margin: 20px 0;
+}
+
+/* bouton postuler */
+.offre-detail a.btn {
+  display: inline-block;
+  margin-top: 20px;
+  background: #0077cc;
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 15px;
+  transition: background 0.3s;
+}
+
+.offre-detail a.btn:hover {
+  background: #005fa3;
+}
+
+/* lien retour */
+.offre-detail a.back {
+  display: inline-block;
+  margin-top: 30px;
+  color: #555;
+  text-decoration: none;
+}
+
+.offre-detail a.back:hover {
+  text-decoration: underline;
+}
+
+.tags {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 25px 0;
+}
+
+.tags button {
+  background-color: #17a2b8;          
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.tags button:hover,
+.tags button:focus {
+  background-color: #138496;          
+  transform: translateY(-2px);
+}
+
+.tags button:active {
+  background-color: #117a8b;
+  transform: translateY(0);
+}
+
+
+.tags button.active {
+  background-color: #0f6674;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.form-block {
+  max-width: 700px;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 20px;
+}
+
+
+.form-block label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #00695c;
+}
+
+
+.form-block input,
+.form-block select,
+.form-block textarea {
+  display: block;
+  width: 100%;
+  padding: 8px 10px;
+  margin-bottom: 0; 
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+
+.form-block textarea {
+  grid-column: 1 / -1;
+  resize: vertical;
+}
+
+
+.form-block .btn-action {
+  grid-column: 1 / -1;
+  background: #e74c3c;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  justify-self: start;
+}
+
+
+.salary-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+  grid-column: 1 / -1;
+}
+.offre-form label,
+.offre-form input[type="file"] {
+  display: block;
+  width: 100%;
+  margin-bottom: 0.8em;
+}
+
+
